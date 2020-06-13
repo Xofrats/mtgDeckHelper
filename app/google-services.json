@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "239363376947",
+    "firebase_url": "https://mtgdeckhelper-fe888.firebaseio.com",
+    "project_id": "mtgdeckhelper-fe888",
+    "storage_bucket": "mtgdeckhelper-fe888.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239363376947:android:48162a3bb5f0b2a6fa2046",
+        "android_client_info": {
+          "package_name": "com.example.mtgDeckHelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239363376947-du2m4ce840kc747cllf6vqqhcmmqpdjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDkZ91T5i2ECxLREFX9ylAacVO1V9qAoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239363376947-du2m4ce840kc747cllf6vqqhcmmqpdjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

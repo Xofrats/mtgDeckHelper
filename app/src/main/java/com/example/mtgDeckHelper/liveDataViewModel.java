@@ -17,7 +17,7 @@ public class liveDataViewModel extends ViewModel {
         notes.setValue(result);
     }
 
-    public void addNote(String note){
+    public void search_cards(String note){
         clearNotes();
         Controller controller = new Controller(this, note);
         controller.start();

@@ -6,6 +6,9 @@ public class urlHandler {
     private String color;
     private String type;
 
+    public urlHandler() {
+    }
+
     public void setText(String text) {
         this.text = text;
     }
