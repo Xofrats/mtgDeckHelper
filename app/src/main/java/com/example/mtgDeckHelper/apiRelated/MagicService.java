@@ -1,4 +1,6 @@
-package com.example.mtgDeckHelper;
+package com.example.mtgDeckHelper.apiRelated;
+
+import com.example.mtgDeckHelper.apiRelated.api_response_succes;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

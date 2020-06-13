@@ -1,4 +1,4 @@
-package com.example.mtgDeckHelper.main;
+package com.example.mtgDeckHelper.fragments;
 
 import android.content.Context;
 
@@ -26,11 +26,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         if(position == 0){
             return SearchFormFragment.newInstance();
         }
-//        else if(position == 1){
-//
-//        }
+        else if(position == 1){
+            return Fragment_Result.newInstance();
+        }
         else {
-            return SearchFormFragment.newInstance();
+            return Fragment_wishlist.newInstance();
         }
     }
 

@@ -1,18 +1,11 @@
 package com.example.mtgDeckHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.mtgDeckHelper.main.SectionsPagerAdapter;
+import com.example.mtgDeckHelper.fragments.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {

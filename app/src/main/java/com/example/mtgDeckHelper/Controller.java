@@ -2,6 +2,10 @@ package com.example.mtgDeckHelper;
 
 import java.util.concurrent.TimeUnit;
 
+import com.example.mtgDeckHelper.apiRelated.Card;
+import com.example.mtgDeckHelper.apiRelated.MagicService;
+import com.example.mtgDeckHelper.apiRelated.MyInterceptor;
+import com.example.mtgDeckHelper.apiRelated.api_response_succes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -19,6 +23,7 @@ public class Controller implements Callback<api_response_succes> {
 
     liveDataViewModel requestedFrom;
     String searchNote;
+
     public Controller(liveDataViewModel myModel, String note) {
         requestedFrom = myModel;
         searchNote = note;

@@ -1,4 +1,4 @@
-package com.example.mtgDeckHelper.main;
+package com.example.mtgDeckHelper.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,17 +9,14 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.mtgDeckHelper.R;
 import com.example.mtgDeckHelper.liveDataViewModel;
-import com.example.mtgDeckHelper.urlHandler;
+import com.example.mtgDeckHelper.apiRelated.urlHandler;
 
 
 
 public class SearchFormFragment extends Fragment {
-
-    private PageViewModel pageViewModel;
 
     liveDataViewModel viewModel;
     EditText text;

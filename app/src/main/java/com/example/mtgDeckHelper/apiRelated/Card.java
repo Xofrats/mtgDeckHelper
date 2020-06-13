@@ -1,4 +1,4 @@
-package com.example.mtgDeckHelper;
+package com.example.mtgDeckHelper.apiRelated;
 
 public class Card {
     private String name;
