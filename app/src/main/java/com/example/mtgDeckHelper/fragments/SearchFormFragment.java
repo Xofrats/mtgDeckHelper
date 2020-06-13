@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,8 @@ public class SearchFormFragment extends Fragment {
     EditText type;
     EditText color;
 
+
+
     public static SearchFormFragment newInstance() {
         SearchFormFragment fragment = new SearchFormFragment();
         Bundle bundle = new Bundle();
@@ -41,26 +44,35 @@ public class SearchFormFragment extends Fragment {
         type = (EditText)rootView.findViewById(R.id.inputType);
         color = (EditText)rootView.findViewById(R.id.inputColor);
 
+        Button btn = (Button) rootView.findViewById(R.id.button_search);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               onClick_search_cards();
+            }
+        });
+
         return rootView;
 
 }
 
 
-    public void search_cards(View view) {
+    public void onClick_search_cards() {
         urlHandler handler = new urlHandler();
-        if(text.getText() != null){
+        if(!(text.getText().toString().equals(""))){
             handler.setText(text.getText().toString());
         }
 
-        if(cmc.getText() != null){
+        if(!(cmc.getText().toString().equals(""))){
             handler.setCmc(cmc.getText().toString());
         }
 
-        if(type.getText() != null){
+        if(!(type.getText().toString().equals(""))){
             handler.setType(type.getText().toString());
         }
 
-        if(color.getText() != null){
+        if(!(color.getText().toString().equals(""))){
             handler.setColours(color.getText().toString());
         }
         viewModel.search_cards(handler.generateUrl());

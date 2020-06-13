@@ -1,4 +1,4 @@
-package com.example.mtgDeckHelper;
+package com.example.mtgDeckHelper.apiRelated;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,6 +6,7 @@ import com.example.mtgDeckHelper.apiRelated.Card;
 import com.example.mtgDeckHelper.apiRelated.MagicService;
 import com.example.mtgDeckHelper.apiRelated.MyInterceptor;
 import com.example.mtgDeckHelper.apiRelated.api_response_succes;
+import com.example.mtgDeckHelper.liveDataViewModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -24,9 +25,12 @@ public class Controller implements Callback<api_response_succes> {
     liveDataViewModel requestedFrom;
     String searchNote;
 
-    public Controller(liveDataViewModel myModel, String note) {
+    public Controller(liveDataViewModel myModel) {
         requestedFrom = myModel;
-        searchNote = note;
+    }
+
+    public void setSearchNote(String searchNote) {
+        this.searchNote = searchNote;
     }
 
     static final String BASE_URL = "https://api.scryfall.com";
@@ -64,14 +68,10 @@ public class Controller implements Callback<api_response_succes> {
             System.out.println(response.body());
             System.out.println("-------------------------------------------");
             api_response_succes changesList = response.body();
-            for (Card card: changesList.getData()
-                 ) {
-                requestedFrom.addNewNote(card.getName());
-            }
+           requestedFrom.update_cards(changesList.getData());
 
         } else {
             System.out.println("----------RESPONSE IS WRONG---------- \n");
-            requestedFrom.addNewNote("No cards found");
             try {
                 JSONObject jObjError = new JSONObject(response.errorBody().string());
                 System.out.println(jObjError.toString() + "\n");

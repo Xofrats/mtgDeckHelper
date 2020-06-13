@@ -1,15 +1,16 @@
 package com.example.mtgDeckHelper.apiRelated;
 
+import java.util.Arrays;
+
 public class Card {
     private String name;
     private String mana_cost;
     private String cmc;
     private String type_line;
     private String oracle_text;
-    private String colors;
-    private String color_identity;
-    private String keywords;
-    private String[] image_uris;
+    private String[] colors;
+    private String[] color_identity;
+    private String[] keywords;
 
     public Card() {
     }
@@ -26,10 +27,6 @@ public class Card {
         return cmc;
     }
 
-    public String getMana_cost() {
-        return mana_cost;
-    }
-
     public String getType_line() {
         return type_line;
     }
@@ -38,15 +35,15 @@ public class Card {
         return oracle_text;
     }
 
-    public String getColors() {
+    public String[] getColors() {
         return colors;
     }
 
-    public String getColor_identity() {
+    public String[] getColor_identity() {
         return color_identity;
     }
 
-    public String getKeywords() {
+    public String[] getKeywords() {
         return keywords;
     }
 
@@ -54,8 +51,13 @@ public class Card {
     public String toString() {
         return "Card{" +
                 "name='" + name + '\'' +
-                ", manaCost='" + mana_cost + '\'' +
-                ", cmc=" + cmc +
+                ", mana_cost='" + mana_cost + '\'' +
+                ", cmc='" + cmc + '\'' +
+                ", type_line='" + type_line + '\'' +
+                ", oracle_text='" + oracle_text + '\'' +
+                ", colors=" + Arrays.toString(colors) +
+                ", color_identity=" + Arrays.toString(color_identity) +
+                ", keywords=" + Arrays.toString(keywords) +
                 '}';
     }
 }
