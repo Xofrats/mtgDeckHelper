@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">mtgDeckHelper</string>
+
+    <string name="tab_text_1">Search</string>
+    <string name="tab_text_2">Result</string>
+    <string name="tab_text_3">Wishlist</string>
+
+    <string name="button_search">Search</string>
+    <string name="button_clear">Clear</string>
+    <string name="Text_enter">Enter Text</string>
+    <string name="Text_result">Search Result</string>
+</resources>
