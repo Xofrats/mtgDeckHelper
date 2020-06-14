@@ -15,7 +15,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -29,11 +29,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             return SearchFormFragment.newInstance();
         }
         else if(position == 1){
-            return new Fragment_Result();
+            return Fragment_Result.newInstance();
         }
-        else {
+
+        else if(position == 2){
             return Fragment_wishlist.newInstance();
         }
+        else return Fragment_login.newInstance();
     }
 
     @Nullable
@@ -45,6 +47,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
 
-        return 3;
+        return 4;
     }
 }

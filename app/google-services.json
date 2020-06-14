@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239363376947:android:f93bb1f0397f1442fa2046",
+        "android_client_info": {
+          "package_name": "com.example.mtgDecksHelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239363376947-du2m4ce840kc747cllf6vqqhcmmqpdjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDkZ91T5i2ECxLREFX9ylAacVO1V9qAoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239363376947-du2m4ce840kc747cllf6vqqhcmmqpdjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

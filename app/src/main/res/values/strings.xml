@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">mtgDeckHelper</string>
 
+    <string name="tab_text_4">Login</string>
     <string name="tab_text_1">Search</string>
     <string name="tab_text_2">Result</string>
     <string name="tab_text_3">Wishlist</string>

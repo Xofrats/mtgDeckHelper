@@ -36,12 +36,12 @@ public class Fragment_Result extends Fragment implements CardAdapter.OnListItemC
     RecyclerView mResultList;
     CardAdapter cardAdapter;
 
-//    public static Fragment_Result newInstance() {
-////        Fragment_Result fragment = new Fragment_Result();
-////        Bundle bundle = new Bundle();
-////        fragment.setArguments(bundle);
-////        return fragment;
-////    }
+    public static Fragment_Result newInstance() {
+        Fragment_Result fragment = new Fragment_Result();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(
