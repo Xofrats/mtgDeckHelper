@@ -54,9 +54,9 @@ public class CardDatabaseRepository {
         //new InsertCardAsync(cardDao).execute(card);
     }
 
-//    public void deleteAllNotes(){
-//        new DeleteAllNotesAsync(cardDao).execute();
-//    }
+    public void deleteList(){
+        new DeleteListAsync(cardDao).execute();
+    }
 
 
 //    private static class InsertCardAsync extends AsyncTask<CardList,Void,Void> {
@@ -73,17 +73,17 @@ public class CardDatabaseRepository {
 //        }
 //    }
 
-//    private static class DeleteAllNotesAsync extends AsyncTask<Void,Void,Void> {
-//        private CardDatabaseDAO cardDao;
-//
-//        private DeleteAllNotesAsync(CardDatabaseDAO cardDao) {
-//            this.cardDao = cardDao;
-//        }
-//
-//        @Override
-//        protected Void doInBackground(Void... voids) {
-//            cardDao.deleteList();
-//            return null;
-//        }
-//    }
+    private static class DeleteListAsync extends AsyncTask<Void,Void,Void> {
+        private CardDatabaseDAO cardDao;
+
+        private DeleteListAsync(CardDatabaseDAO cardDao) {
+            this.cardDao = cardDao;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            cardDao.deleteList();
+            return null;
+        }
+    }
 }

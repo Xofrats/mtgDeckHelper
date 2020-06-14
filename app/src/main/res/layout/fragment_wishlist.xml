@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fWishdeleteList"
         app:layout_constraintTop_toBottomOf="@+id/fWishList"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -42,5 +42,22 @@
         android:text="see wishlist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fWishList" />
+
+    <Button
+        android:id="@+id/fWishdeleteList"
+        android:layout_width="174dp"
+        android:layout_height="50dp"
+        android:text="delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/fWishWeb"
+        android:layout_width="215dp"
+        android:layout_height="51dp"
+        android:text="search online"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fWishdeleteList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

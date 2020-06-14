@@ -1,5 +1,7 @@
 package com.example.mtgDeckHelper.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +61,7 @@ public class Fragment_wishlist extends Fragment {
             @Override
             public void onClick(View v) {
                 if (result == null){
+                    wishlist.setText("");
                     wishlist.setText("Is null \n");
                     return;
                 }
@@ -70,6 +73,32 @@ public class Fragment_wishlist extends Fragment {
                     }
                 } else
                     wishlist.setText("Is empty \n");
+            }
+        });
+
+        Button deleteList = (Button) root.findViewById(R.id.fWishdeleteList);
+        deleteList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardDatabaseViewModel.deleteList();
+            }
+        });
+
+        Button searchOnline = (Button) root.findViewById(R.id.fWishWeb);
+        searchOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (CardList card: result
+                     ) {
+                    String action = Intent.ACTION_VIEW;
+                    String place = "https://www.kelz0r.dk/magic/advanced_search_result.php?keywords=" + card.getCardname() + "&search_in_description=0";
+                    Uri uri = Uri.parse(place);
+
+                    Intent intent = new Intent(action, uri);
+                    startActivity(intent);
+                }
+
+
             }
         });
 

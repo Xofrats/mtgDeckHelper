@@ -23,6 +23,9 @@ public interface CardDatabaseDAO {
     @Delete
     void delete(CardList card);
 
+    @Query("Delete FROM CardList")
+    void deleteList();
+
     @Query("SELECT * FROM CardList")
     List<CardList> getCardlist();
 }

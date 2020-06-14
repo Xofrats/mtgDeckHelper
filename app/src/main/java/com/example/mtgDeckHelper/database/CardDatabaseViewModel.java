@@ -26,7 +26,7 @@ public class CardDatabaseViewModel extends AndroidViewModel {
         repository.insert(card);
     }
 
-//    public void deleteAllNotes() {
-//        repository.deleteAllNotes();
-//    }
+    public void deleteList() {
+        repository.deleteList();
+    }
 }
