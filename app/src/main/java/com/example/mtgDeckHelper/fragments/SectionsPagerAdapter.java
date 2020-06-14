@@ -29,7 +29,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             return SearchFormFragment.newInstance();
         }
         else if(position == 1){
-            return Fragment_Result.newInstance();
+            return new Fragment_Result();
         }
         else {
             return Fragment_wishlist.newInstance();

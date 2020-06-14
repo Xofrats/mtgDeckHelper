@@ -15,9 +15,11 @@ import java.util.ArrayList;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     private ArrayList<Card> mResultList;
+    final private OnListItemClickListener mOnListItemClickListener;
 
-    public CardAdapter(ArrayList<Card> mCards) {
+    public CardAdapter(ArrayList<Card> mCards, OnListItemClickListener listener) {
         this.mResultList = mCards;
+        mOnListItemClickListener = listener;
     }
 
     public void setmResultList(ArrayList<Card> mResultList) {
@@ -33,10 +35,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         viewHolder.name.setText(mResultList.get(position).getName());
-        viewHolder.manacost.setText(mResultList.get(position).getManaCost());
+        viewHolder.manacost.setText(mResultList.get(position).getMana_cost());
         viewHolder.cmc.setText(mResultList.get(position).getCmc());
         viewHolder.type.setText(mResultList.get(position).getType_line());
         viewHolder.oracleText.setText(mResultList.get(position).getOracle_text());
+
     }
 
 
@@ -44,7 +47,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         return mResultList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView name;
         TextView manacost;
@@ -59,8 +62,18 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
             cmc = itemView.findViewById(R.id.rv_cmc);
             type = itemView.findViewById(R.id.rv_type);
             oracleText = itemView.findViewById(R.id.rv_oracleText);
+            itemView.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            mOnListItemClickListener.onListItemClick(getAdapterPosition());
+        }
+
+    }
+
+    public interface OnListItemClickListener {
+        void onListItemClick(int clickedItemIndex);
     }
 }
 
