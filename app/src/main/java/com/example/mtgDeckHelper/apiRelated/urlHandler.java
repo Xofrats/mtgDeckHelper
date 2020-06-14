@@ -33,15 +33,15 @@ public class urlHandler {
         }
 
         if (cmc != null){
-            result += cmc + "+";
+            result += "cmc=" + cmc + "+";
         }
 
         if (color != null){
-            result += color + "+";
+            result += "color=" + color + "+";
         }
 
         if (type != null){
-            result += type + "+";
+            result += "type_line=" + type + "+";
         }
 
         return result;

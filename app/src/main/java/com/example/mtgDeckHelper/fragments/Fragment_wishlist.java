@@ -60,19 +60,7 @@ public class Fragment_wishlist extends Fragment {
         seeList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (result == null){
-                    wishlist.setText("");
-                    wishlist.setText("Is null \n");
-                    return;
-                }
-                if(!result.isEmpty()){
-                    wishlist.setText("");
-                    for (CardList card: result
-                         ) {
-                        wishlist.setText(wishlist.getText() + card.getCardname() + "\n");
-                    }
-                } else
-                    wishlist.setText("Is empty \n");
+                setTextForTextfield();
             }
         });
 
@@ -91,7 +79,7 @@ public class Fragment_wishlist extends Fragment {
                 for (CardList card: result
                      ) {
                     String action = Intent.ACTION_VIEW;
-                    String place = "https://www.kelz0r.dk/magic/advanced_search_result.php?keywords=" + card.getCardname() + "&search_in_description=0";
+                    String place = getKelzorUrl(card);
                     Uri uri = Uri.parse(place);
 
                     Intent intent = new Intent(action, uri);
@@ -103,6 +91,26 @@ public class Fragment_wishlist extends Fragment {
         });
 
         return root;
+    }
+
+    public String getKelzorUrl(CardList card) {
+        return "https://www.kelz0r.dk/magic/advanced_search_result.php?keywords=" + card.getCardname() + "&search_in_description=0";
+    }
+
+    public void setTextForTextfield() {
+        if (result == null){
+            wishlist.setText("");
+            wishlist.setText("Is null \n");
+            return;
+        }
+        if(!result.isEmpty()){
+            wishlist.setText("");
+            for (CardList card: result
+                 ) {
+                wishlist.setText(wishlist.getText() + card.getCardname() + "\n");
+            }
+        } else
+            wishlist.setText("Is empty \n");
     }
 
 }
