@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class Fragment_Result extends Fragment implements CardAdapter.OnListItemC
    // CardDatabaseViewModel database;
 
     CardList savedCard;
+    TextView selectedCard;
 
     RecyclerView mResultList;
     CardAdapter cardAdapter;
@@ -54,7 +56,7 @@ public class Fragment_Result extends Fragment implements CardAdapter.OnListItemC
         cardAdapter = new CardAdapter(CardRepository.getInstance().getCards(), this);
         mResultList.setAdapter(cardAdapter);
 
-
+        selectedCard = root.findViewById(R.id.tv_selected_card);
 
         Button btn = (Button) root.findViewById(R.id.button);
 
@@ -69,7 +71,7 @@ public class Fragment_Result extends Fragment implements CardAdapter.OnListItemC
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(savedCard.getCardname());
+
                 saveCard(new CardList(savedCard.getList(), savedCard.getCardname()));
             }
         });
@@ -97,6 +99,7 @@ updateResult();
         int cardindex = clickedItemIndex;
         String toast = "Card Clicked: " + cards.get(cardindex).getName() + "\n";
         System.out.println(toast);
+        selectedCard.setText(cards.get(cardindex).getName());
         CardList newCard = new CardList("wistlist", cards.get(cardindex).getName());
         savedCard = newCard;
     }

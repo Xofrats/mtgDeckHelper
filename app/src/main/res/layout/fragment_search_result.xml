@@ -5,22 +5,44 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragments.ResultFragment">
-
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:rowCount="1"
+    >
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+
+
+        android:background="@color/colorAccent"
         android:text="update" />
 
     <Button
         android:id="@+id/fSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_columnWeight="1"
         android:text="save" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_selected_card"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/colorPrimaryLight"
+        android:text="Current selected card" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvResult"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" />
 
 </LinearLayout>

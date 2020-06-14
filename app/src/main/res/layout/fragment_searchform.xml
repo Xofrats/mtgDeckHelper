@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8C8181"
+    android:background="@color/colorPrimary"
     tools:context=".fragments.SearchFormFragment">
 
     <EditText
@@ -12,10 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="#B8B4B4"
+        android:background="?attr/editTextBackground"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="Text"
         android:inputType="textPersonName"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,9 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="CMC"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputColor" />
@@ -37,9 +41,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="Type"
         android:inputType="textPersonName"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputCMC" />
@@ -49,9 +55,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:background="?attr/editTextBackground"
+        android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:hint="Color"
-        android:inputType="number"
+        android:inputType="textPersonName"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
@@ -60,6 +69,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
         android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

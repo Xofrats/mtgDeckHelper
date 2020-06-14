@@ -4,23 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="#404040"
-    android:orientation="vertical">
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:elevation="8dp"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/rv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B6A7A7"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="5dp"
         android:text="name"
+        android:textSize="30sp"
+        android:elevation="4dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/rv_manacost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#B6A7A7"
+        android:layout_marginRight="50dp"
+        android:elevation="4dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="5dp"
         android:text="manacost"
         tools:layout_editor_absoluteY="40dp" />
 
@@ -28,16 +41,22 @@
         android:id="@+id/rv_cmc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#B6A7A7"
+        android:background="@color/colorPrimaryLight"
+        android:padding="5dp"
+        android:elevation="4dp"
         android:text="cmc"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="39dp" />
+</GridLayout>
 
     <TextView
         android:id="@+id/rv_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#B6A7A7"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="5dp"
+        android:elevation="4dp"
         android:text="type"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="70dp" />
@@ -46,7 +65,11 @@
         android:id="@+id/rv_oracleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#B6A7A7"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="5dp"
+        android:elevation="4dp"
+        android:textSize="30sp"
         android:text="oracleText"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="99dp" />

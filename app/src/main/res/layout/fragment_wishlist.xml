@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,6 +24,11 @@
         android:id="@+id/tv_wishlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:elevation="6dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="25sp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/fWishdeleteList"
         app:layout_constraintTop_toBottomOf="@+id/fWishList"
@@ -30,34 +36,51 @@
 
     <Button
         android:id="@+id/fWishList"
-        android:layout_width="203dp"
-        android:layout_height="48dp"
+        android:layout_width="202dp"
+        android:layout_height="51dp"
+        android:background="@color/colorPrimaryLight"
+        android:elevation="4dp"
         android:text="get wishlist"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/fWishlistSee"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="197dp"
+        android:layout_height="53dp"
+        android:background="@color/colorPrimaryLight"
+        android:elevation="4dp"
+        android:layout_margin="5dp"
         android:text="see wishlist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fWishList" />
+        app:layout_constraintStart_toEndOf="@+id/fWishList"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/fWishdeleteList"
-        android:layout_width="174dp"
+        android:layout_width="194dp"
         android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:background="@color/colorPrimaryLight"
         android:text="delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/fWishWeb"
-        android:layout_width="215dp"
-        android:layout_height="51dp"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:background="@color/colorPrimaryLight"
         android:text="search online"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fWishdeleteList" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/fWishdeleteList"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wishlist"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
