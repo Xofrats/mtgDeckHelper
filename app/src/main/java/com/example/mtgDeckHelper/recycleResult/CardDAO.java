@@ -1,4 +1,4 @@
-package com.example.mtgDeckHelper;
+package com.example.mtgDeckHelper.recycleResult;
 
 
 import com.example.mtgDeckHelper.apiRelated.Card;

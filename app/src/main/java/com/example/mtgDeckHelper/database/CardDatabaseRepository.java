@@ -54,6 +54,17 @@ public class CardDatabaseRepository {
         new DeleteListAsync(cardDao).execute();
     }
 
+    public void deleteCard(CardList card){
+        new AsyncTask<CardList, Void, Void>(){
+            @Override
+            protected Void doInBackground(CardList... params) {
+                cardDao.delete(params[0]);
+                return null;
+            }
+        }.execute(card);
+
+    }
+
 
     private static class DeleteListAsync extends AsyncTask<Void,Void,Void> {
         private CardDatabaseDAO cardDao;

@@ -1,11 +1,8 @@
-package com.example.mtgDeckHelper;
-
-import androidx.lifecycle.LiveData;
+package com.example.mtgDeckHelper.recycleResult;
 
 import com.example.mtgDeckHelper.apiRelated.Card;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CardRepository {
 
