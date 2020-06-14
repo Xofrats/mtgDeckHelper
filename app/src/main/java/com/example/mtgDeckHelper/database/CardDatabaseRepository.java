@@ -36,10 +36,7 @@ public class CardDatabaseRepository {
                 return cardList;
             }
         }.execute();
-        System.out.println("-----------DONE---------------");
         return cardList;
-
-
     }
 
 
@@ -51,27 +48,12 @@ public class CardDatabaseRepository {
                 return null;
             }
         }.execute(card);
-        //new InsertCardAsync(cardDao).execute(card);
     }
 
     public void deleteList(){
         new DeleteListAsync(cardDao).execute();
     }
 
-
-//    private static class InsertCardAsync extends AsyncTask<CardList,Void,Void> {
-//        private CardDatabaseDAO cardDao;
-//
-//        private InsertCardAsync(CardDatabaseDAO cardDao) {
-//            this.cardDao = cardDao;
-//        }
-//
-//        @Override
-//        protected Void doInBackground(CardList... cards) {
-//            cardDao.insert(cards[0]);
-//            return null;
-//        }
-//    }
 
     private static class DeleteListAsync extends AsyncTask<Void,Void,Void> {
         private CardDatabaseDAO cardDao;

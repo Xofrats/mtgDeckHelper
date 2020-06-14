@@ -85,6 +85,8 @@ updateResult();
     public void saveCard(CardList card) {
         CardDatabaseViewModel database = new CardDatabaseViewModel(getActivity().getApplication());
         database.insert(card);
+        selectedCard.setText("Saved!");
+        savedCard = null;
     }
 
     public void updateResult(){
@@ -97,8 +99,6 @@ updateResult();
     @Override
     public void onListItemClick(int clickedItemIndex) {
         int cardindex = clickedItemIndex;
-        String toast = "Card Clicked: " + cards.get(cardindex).getName() + "\n";
-        System.out.println(toast);
         selectedCard.setText(cards.get(cardindex).getName());
         CardList newCard = new CardList("wistlist", cards.get(cardindex).getName());
         savedCard = newCard;

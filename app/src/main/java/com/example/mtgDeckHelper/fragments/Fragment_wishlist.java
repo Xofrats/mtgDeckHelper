@@ -104,10 +104,15 @@ public class Fragment_wishlist extends Fragment {
             return;
         }
         if(!result.isEmpty()){
+            ArrayList<String> check = new ArrayList<>();
             wishlist.setText("");
             for (CardList card: result
                  ) {
-                wishlist.setText(wishlist.getText() + card.getCardname() + "\n");
+               if(!(check.contains(card.getCardname()))){
+                   wishlist.setText(wishlist.getText() + card.getCardname() + "\n");
+                   check.add(card.getCardname());
+               }
+
             }
         } else
             wishlist.setText("Is empty \n");
